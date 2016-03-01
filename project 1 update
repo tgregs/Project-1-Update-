@@ -1,4 +1,6 @@
-Enter file contents herefloat sunX, sunY; //variables for sun
+// Gregory -- Preject 1 
+
+float sunX, sunY; //variables for sun
 float xGold, yGold; //position of gold
 float xPhil, yPhil; // position of phil
 float r,g,b,a; // variables for colors
@@ -16,11 +18,9 @@ void reset(){
   sunX=  width/2;   // Reset the sun position.
   sunY= random (200, 250);
   score = 0;
-}
-  
+}\
 
 void draw() {
-   
   scene(); //calls the scene function
   randomColor(); //calls the random color function
   messages(); //calls the messages function 
@@ -29,7 +29,6 @@ void draw() {
   phil(); //calls the hero function
  
 }
-  
   void scene(){
     background(0, 175, 255);//background color
     fill(0, 200, 0); //green grass rectangle color
@@ -82,11 +81,8 @@ void draw() {
     xPhil = xPhil + (xGold-xPhil)/15; // moves phil to gold x axis 
     yPhil = yPhil + (yGold-yPhil)/15; // moves phil to gold y axis  
     
-  
-    
       score = score + 100;
     } 
-  
   
   void randomColor(){
   r = random(255);
@@ -98,6 +94,7 @@ void draw() {
   void messages(){
     fill(0);
     text(" Your score is:"+score,10,10 ); // displays the score 
+    text(" Trevor Gregory Project 1",width/3,10);
   }
   void gold(){
     fill(218,165,32);
